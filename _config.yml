@@ -30,6 +30,6 @@ prose:
   media: img/uploads/
   metadata:
       _posts:
-        - name: 'layout'
+        - name: 'history'
           field:
-            element: "hidden"
+            element: 'hidden'
