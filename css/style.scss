@@ -1,0 +1,346 @@
+---
+# Main Stylesheet
+---
+
+@charset "UTF-8";
+
+@import "mixins";
+@import "icons";
+@import "extends";
+@import "normalize";
+@import "variables";
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+html, body {
+  width: $width-100;
+}
+body {
+  min-height: 100%;
+  font-style: normal;
+  font-family: $font-base-regular, $font-base-simple;
+  @include font-size($font-base-size);
+  &.fn-locked {
+    position: fixed;
+    width: $width-100;
+    overflow-y: scroll;
+  }
+}
+header {
+  z-index: 10;
+  @include position-absolute-custom(0px 0 0 0px);
+  nav {
+  }
+}
+main {
+  width: $width-100;
+}
+footer {
+  z-index: 10;
+  @include position-absolute-custom(0 0 0px 0px);
+  i {
+    min-width: 33px;
+  }
+}
+
+.page-loader {
+  z-index: 101;
+  height: 3px;
+  background: none;
+  width: $width-100;
+  pointer-events: none;
+  @include position-absolute-custom(0px 0 0 0px, fixed);
+  &.fn-loaded {
+    &::after {
+      height: 0px;
+      width: inherit;
+      @include animation-custom(loaded, 1s 0s 1);
+      @include animation-keyframe(loaded) {
+        0% {
+          height: 3px;
+          width: 90%;
+        }
+        50% {
+          height: 3px;
+          width: 100%;
+        }
+        99% {
+          height: 0px;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  &::after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    background-color: $color-app-orange;
+    @include position-absolute-custom(0px 0 0 0px);
+    @include animation-custom(loading, 20s 0s 1);
+    @include animation-keyframe(loading) {
+      0% {
+        width: 0%;
+      }
+      99% {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include class-model(c) {
+  @include class-model(logo) {
+    // --- mobile -----------------------------
+    @include breakpoint(600px, 'to') {
+      text-align: center;
+    }
+  }
+  @include class-modifire(lead) {
+    // --- mobile -----------------------------
+    @include breakpoint(600px, 'to') {
+      h1 {
+        @include line-height(36);
+        @include font-size(26);
+      }
+      h3 {
+        @include font-size(20);
+      }
+    }
+    h1 {
+      @include font-size(40);
+    }
+  }
+  @include class-modifire(head) {
+    @include class-modifire(holder) {
+      z-index: 2;
+      position: relative;
+      @include background-cover('main-head-background.jpg', 0, 0, 100%, 100vh);
+      &::after {
+        content: '';
+        width: $width-100;
+        height: $height-100;
+        display: inline-block;
+        @include opacity(.75);
+        @include position-absolute-custom(0px 0 0 0px);
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+    @include class-model(content) {
+      height: 100vh;
+    }
+    @include class-modifire(lead) {
+      position: relative;
+      z-index: 3;
+      h1 {
+        // --- mobile -----------------------------
+        @include breakpoint(500px, 'to') {
+          @include font-size(40);
+        }
+        @include font-size(60);
+      }
+      h2 {
+        // --- mobile -----------------------------
+        @include breakpoint(500px, 'to') {
+          @include font-size(30);
+        }
+        @include element-width-custom(90%);
+        @include font-size(40);
+      }
+      h1, h2 {
+        @include line-height(45);
+      }
+    }
+    i {
+      // padding: 5px;
+      @include position-absolute-center();
+      width: 33px;
+      top: 40vh;
+    }
+  }
+  @include class-modifire(services) {
+    @include class-modifire(features) {
+      h5 {
+        // --- mobile -----------------------------
+        @include breakpoint(700px, 'to') {
+          min-height: 0;
+        }
+        min-height: 130px;
+        @include line-height(22);
+      }
+    }
+    // --- mobile -----------------------------
+    @include breakpoint(700px, 'to') {
+      @include class-model(flex) {
+        display: inline-block;
+      }
+      @include class-model(column) {
+        width: $width-100 !important;
+      }
+      button {
+        width: auto;
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+  @include class-modifire(about) {
+    @include class-modifire(quote) {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px dashed $color-lightgrey;
+      img {
+        @include box-shadow(5px 5px 0 rgba(204, 204, 204, .5));
+      }
+      h5 {
+        z-index: 0;
+        @include line-height(24);
+        &::before {
+          z-index: -1;
+          content: '"';
+          @include position-absolute-center(50px);
+          @include font-size(200);
+          color: $color-lightenesgrey;
+        }
+      }
+    }
+    form {
+      input, textarea {
+        @include box-shadow(none);
+        @include font-size(18);
+        color: $color-black;
+        &:focus {
+          border: $border-default $color-app-orange;
+        }
+      }
+      textarea {
+        height: 200px;
+      }
+      input {
+        &.fn-bouncing {
+          @include animation-custom(bouncing, .5s 0s 1);
+          @include animation-keyframe(bouncing) {
+            0% {
+              @include transform-translate(1%, 0);
+            }
+            20% {
+              @include transform-translate(-2%, 0);
+            }
+            40% {
+              @include transform-translate(2%, 0);
+            }
+            60% {
+              @include transform-translate(-1%, 0);
+            }
+            80% {
+              @include transform-translate(3%, 0);
+            }
+            100% {
+              @include transform-translate(0, 0);
+            }
+          }
+        }
+      }
+      button {
+        position: relative;
+        color: $color-app-orange;
+        &.fn-success, &.fn-error {
+          cursor: default;
+          &::after {
+            width: $width-100;
+            @include position-absolute-custom(0px 0 0 0px);
+            @include font-size(32, false);
+            text-align: center;
+            padding: 8px 0;
+            background-color: $color-white;
+          }
+        }
+        &.fn-success {
+          &::after {
+            @include font-icon('\e042');
+          }
+        }
+        &.fn-error {
+          &::after {
+            @include font-icon('\e043');
+          }
+        }
+      }
+    }
+  }
+  @include class-modifire(positions) {
+    @include class-modifire(holder) {
+      z-index: 2;
+      position: relative;
+      @include background-cover('main-possitions-background.jpg', 0, 0px, 100%, 800px);
+      &::after {
+        content: '';
+        width: $width-100;
+        height: $height-100;
+        display: inline-block;
+        @include opacity(.75);
+        @include position-absolute-custom(0px 0 0 0px);
+        background-color: rgba(0, 0, 0, .7);
+      }
+    }
+    @include class-modifire(lead) {
+      position: relative;
+      z-index: 3;
+    }
+    @include class-modifire(list) {
+      position: relative;
+      z-index: 3;
+      ul {
+        li {
+
+        }
+      }
+    }
+  }
+}
+.job {
+  @include class-model(c) {
+    @include class-modifire(position) {
+      h1 {
+        margin-bottom: 30px;
+        font-family: $font-base-bold;
+        @include line-height(26);
+      }
+      p {
+        @include line-height(30);
+        @include font-size(20);
+        margin-bottom: 20px;
+      }
+      ul {
+        @include font-size(20);
+        list-style: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+      img {
+        width: $width-100;
+        position: relative;
+      }
+      a {
+        // --- mobile -----------------------------
+        @include breakpoint(600px, 'to') {
+          width: $width-100;
+          margin-right: 0;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@import "globals";
+@import "base";

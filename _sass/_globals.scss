@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+// **
+// --------------------
+// GLOBALS
+// --------------------
+// **
+
+@include class-model(c) {
+  @include class-modifire(content) {
+    z-index: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include element-width-custom($breakpoint-appwidth);
+    @include breakpoint($breakpoint-appwidth) {
+      width: $width-100;
+    }
+    @include class-option(regular) {
+      @include breakpoint($breakpoint-appwidth) {
+        padding: 100px 10px !important;
+      }
+      padding: 100px 0;
+    }
+  }
+  // ------------------ mobile ------------------
+  @include class-modifire(fordesktop) {
+    @include breakpoint($breakpoint-appwidth) {
+      display: none;
+    }
+  }
+  @include class-modifire(formobile) {
+    @include breakpoint('from', $breakpoint-appwidth) {
+      display: none;
+    }
+  }
+};

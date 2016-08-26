@@ -1,0 +1,25 @@
+# Main settings
+title: Quicksource
+email:
+description:
+baseurl:
+url:
+excerpt_separator: ''
+twitter_username:
+github_username:
+lang: en
+lang-meta: en-US
+
+# Collections
+collections:
+- jobs
+
+# Build settings
+markdown: kramdown
+
+# Excludes
+exclude:
+  ['font/fontcustom/', 'font/selection.json', 'node_modules', 'gulpfile.js', 'package.json', 'deploy.sh']
+
+# Others
+node_modules_path: 'js/libs/node_modules/'

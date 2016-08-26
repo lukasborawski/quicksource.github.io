@@ -1,0 +1,145 @@
+{
+  "nav": [
+    {
+      "en": "services"
+    },
+    {
+      "en": "jobs"
+    },
+    {
+      "en": "contact"
+    }
+  ],
+  "head": {
+    "lead": {
+      "title": {
+        "en": "What is your next move?"
+      },
+      "subtitle": {
+        "en": "Quicksource is a boutique recruitment agency with a passion for connecting people."
+      },
+      "button": {
+        "en": "check actual offers",
+        "target": "jobs"
+      },
+      "icon": {
+        "target": "services"
+      }
+    }
+  },
+  "services": {
+    "lead": {
+      "title": {
+        "en": "What we do?"
+      },
+      "subtitle": {
+        "en": "At Quicksource connections matter. We believe amazing achievements are made when the right people get connected. Our role? To get to know each person we represent, to understand the specific needs of each client, and to link them correctly in mutual benefit. Simply put, we connect the right people, at the right time, so that amazing things can happen."
+      }
+    },
+    "features": [
+      {
+        "image": "macbook",
+        "title": {
+          "en": "Job Seekers"
+        },
+        "description": {
+          "en": "Are you considering a move? Want to talk about your career options? Drop us an email with your CV or give us a call."
+        },
+        "button": {
+          "en": "contact us",
+          "target": "contact"
+        }
+      },
+      {
+        "image": "city",
+        "title": {
+          "en": "Clients"
+        },
+        "description": {
+          "en": "We mainly specialize in technology positions, so if you have a vacancy in this field, let us know."
+        },
+        "button": {
+          "en": "check actual offers",
+          "target": "jobs"
+        }
+      },
+      {
+        "image": "document",
+        "title": {
+          "en": "Headhunting services"
+        },
+        "description": {
+          "en": "We offer the availability to conduct research of suitable candidates working for competitors or related businesses."
+        },
+        "button": {
+          "en": "send your CV",
+          "target": "contact"
+        }
+      }
+    ]
+  },
+  "about": {
+    "lead": {
+      "title": {
+        "en": "Who we are?"
+      },
+      "subtitle": {
+        "en": "Quicksource was founded in 2010 by Patrycja Koscianska. With more than 13 years experience in the recruitment industry, in particular the technology sector, Patrycja has worked with hundreds of candidates and companies."
+      }
+    }
+  },
+  "positions": {
+    "lead": {
+      "title": {
+        "en": "Current openings"
+      },
+      "subtitle": {
+        "en": "Having identified possible recruits that match the client's requirements, we act as an intermediary to investigate whether the individual might be interested in moving to a new employer and also carry out initial screening of the candidate, negotiations on remuneration, and the employment contract."
+      }
+    }
+  },
+  "position": {
+    "apply_button": {
+      "en": "Apply to this position"
+    },
+    "back_button": {
+      "en": "Back to main page"
+    }
+  },
+  "quote": {
+    "en": "Worked with hundreds of candidates and companies- both start-ups as well as large corporations. The main operational premise is that people hire people, not resumes. Companies are not just looking for a set of qualifications that match a job description."
+  },
+  "contact": {
+    "form": {
+      "input": [
+        {
+          "name": "name",
+          "placeholder": {
+            "en": "your name*",
+            "pl": "twoje imię*"
+          }
+        },
+        {
+          "name": "email",
+          "placeholder": {
+            "en": "your email*",
+            "pl": "twój email*"
+          }
+        },
+        {
+          "name": "message",
+          "placeholder": {
+            "en": "how can we help you?",
+            "pl": "twój email"
+          }
+        }
+      ],
+      "button": {
+        "en": "send",
+        "pl": "wyślij"
+      },
+      "email_address": "https://formspree.io/hmnilb@gmail.com"
+    },
+    "email": "hmnilb@gmail.com"
+  }
+}

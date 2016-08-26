@@ -1,0 +1,93 @@
+---
+layout: main
+bodyClass: main
+meta_keywords:
+meta_description:
+---
+
+<section class="c-head-holder" id="head">
+    <div class="c-content box-vertical_align_transform">
+        <div class="c-head-lead text-align_center">
+            <h1 class="text-color_bwhite"><strong>{{ site.data.l.head.lead.title[site.lang] }}</strong></h1>
+            <h2 class="cfl text-color_apporange shift-padding_4-top">{{ site.data.l.head.lead.subtitle[site.lang] }}</h2>
+            <div class="actionContainer shift-padding_5-top">
+                <button class="js-navigation-anchor button-size_6-color_bwhite_clear-thin-rounded_1" data-target="{{ site.data.l.head.lead.button.target }}" type="button">{{ site.data.l.head.lead.button[site.lang] }}</button>
+                <i class="js-navigation-anchor icon-arrow_down-size_2-color_bwhite box-vertical_align_middle-inline border_full-color_white-radius_circle shift-padding_1 cursor-pointer" data-target="{{ site.data.l.head.lead.icon.target }}"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="c-services-holder" id="services">
+    <div class="c-content_regular">
+        <div class="c-services-lead text-align_center shift-margin_6-bottom">
+            <h1 class="text-color_apporange"><strong>{{ site.data.l.services.lead.title[site.lang] }}</strong></h1>
+            <h3 class="cfl shift-margin_6-top">{{ site.data.l.services.lead.subtitle[site.lang] }}</h3>
+        </div>
+        <div class="c-services-features shift-margin_6-top box-inline-full_width">
+            <div class="shift-margin_6-top">
+                <div class="box-full_width-grid-vertical_align_top-inline-flex-items_stretch">
+                    {% for feature in site.data.l.services.features %}
+                    <div class="column-width_4 rwd-break_landscape_tablet-cut_full shift-padding_6-horizontal text-align_center">
+                        <img src="img/main-icon-{{ feature.image }}.png" alt="Quicksource" />
+                        <h3 class="text-color_apporange shift-margin_4-top"><strong>{{ feature.title[site.lang] }}</strong></h3>
+                        <h5 class="text-color_bgrey shift-padding_2">{{ feature.description[site.lang] }}</h5>
+                        <div class="actionContainer shift-padding_4-horizontal">
+                            <button class="js-navigation-anchor button-color_apporange-size_3-full_width-rounded_1 shift-margin_2-top" type="button" data-target="{{ feature.button.target }}">{{ feature.button[site.lang] }}</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="c-about-holder" id="contact">
+    <div class="c-content_regular border_top-color_blightgrey">
+        <div class="c-about-lead text-align_center shift-margin_6-bottom">
+            <h1 class="text-color_apporange"><strong>{{ site.data.l.about.lead.title[site.lang] }}</strong></h1>
+            <h3 class="cfl shift-margin_6-top">{{ site.data.l.about.lead.subtitle[site.lang] }}</h3>
+        </div>
+        <div class="box-full_width-grid-inline-vertical_align_middle shift-margin_6-top">
+            <div class="column-width_6 rwd-break_landscape_tablet-cut_full text-align_center shift-padding_6-horizontal">
+                <img src="img/main-about-coffecup.png" alt="Quicksource Coffe" />
+                <div class="c-about-quote text-align_center">
+                    <img src="img/main-about-photo.jpg" class="border-radius_circle" alt="Quicksource Patrycja" />
+                    <h5 class="box-inline-full_width-relative shift-margin_5-top text-color_bgrey"><em>{{ site.data.l.quote[site.lang] }}</em></h5>
+                </div>
+            </div>
+            <div class="column-width_6 rwd-break_landscape_tablet-cut_full shift-padding_6-horizontal">
+                <div class="text-align_center shift-padding_2-vertical">
+                    <h3><strong class="text-color_bgrey">Contact with us</strong></h3>
+                </div>
+                {% include contact-form.html %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="c-positions-holder" id="jobs">
+    <div class="c-content_regular">
+        <div class="c-positions-lead text-align_center shift-margin_6-bottom">
+            <h1 class="text-color_bwhite"><strong>{{ site.data.l.positions.lead.title[site.lang] }}</strong></h1>
+            <h3 class="cfl text-color_bwhite shift-margin_6-top">{{ site.data.l.positions.lead.subtitle[site.lang] }}</h3>
+        </div>
+        <div class="c-positions-list shift-margin_6-top">
+            <div class="shift-margin_6-top box-inline-full_width">
+                <ul>
+                    {% for post in site.posts %}
+                    <li class="shift-padding_3 border_full-color_apporange-radius_medium">
+                        <div class="box-full_width-grid-vertical_align_middle">
+                            <div class="column-width_9">
+                                <h4><strong class="text-color_bwhite">{{ post.title }}</strong></h4>
+                            </div>
+                            <div class="column-width_3">
+                                <a class="button-size_3-color_apporange-rounded_1-full_width" type="button" href="{{ post.url }}">Apply</a>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+</section>

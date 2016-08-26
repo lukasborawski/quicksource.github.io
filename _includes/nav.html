@@ -1,0 +1,5 @@
+<nav class="text-align_right box-full_width">
+    {% for element in site.data.l.nav %}
+        <span href="{{ element.[site.lang] }}" class="js-navigation-anchor text-size_medium-color_bwhite-capitalize shift-padding_2-left cursor-pointer" data-target="{{ element.[site.lang] }}">{{ element.[site.lang] }}</span>
+    {% endfor %}
+</nav>

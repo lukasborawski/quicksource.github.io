@@ -1,0 +1,20 @@
+{
+  "repository": "/",
+  "dependencies": {},
+  "devDependencies": {
+    "del"           : "^1.1.1",
+
+    "gulp"          : "~3.9",
+    "async"         : "0.9",
+    "gulp-dest"     : "~0.2",
+    "gulp-uglify"   : "~1.0",
+    "gulp-jshint"   : "~1.9",
+    "gulp-jquery"   : "~1.1",
+
+    "requirejs"     : "~2.2",
+    "html5shiv"     : "~3.7",
+    "modernizr"     : "~3.3",
+
+    "run-sequence"  : "~1.1"
+  }
+}

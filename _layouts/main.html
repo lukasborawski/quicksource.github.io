@@ -1,0 +1,15 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="{{ site.lang_meta }}" prefix="og:http://ogp.me/ns#">
+    {% include head.html %}
+    <body class="fn-locked{% if page.bodyClass %} {{ page.bodyClass }}{% endif %}">
+        <div class="js-page-loader page-loader"></div>
+        {% include header.html %}
+        <main id="main_container" role="main">
+            {{ content }}
+        </main>
+    </body>
+</html>

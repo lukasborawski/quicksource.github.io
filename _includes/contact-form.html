@@ -1,0 +1,16 @@
+<form action="#" class="js-contact-from shift-padding_3-horizontal" data-form-url="{{ site.data.lang.section.contact.form.email_address }}" novalidate>
+    {% for field in site.data.l.contact.form.input %}
+    <fieldset class="shift-padding_2-vertical">
+        {% if field.name contains 'message' %}
+        <textarea type="text" name="{{ field.name }}" class="textarea-scale_6-rounded" placeholder="{{ field.placeholder.[site.lang] }}" required="false" data-mixpanel="clicked Contact Section Form Textarea"></textarea>
+        {% else %}
+        <input type="text" name="{{ field.name }}" class="input_regular-scale_6-rounded" placeholder="{{ field.placeholder.[site.lang] }}" required="true" data-mixpanel="clicked Contact Section Form Input"/>
+        {% endif %}
+    </fieldset>
+    {% endfor %}
+    <input type="hidden" name="_subject" value="New message form website." />
+    <div class="actionContainer shift-margin_2-vertical">
+        <button type="button" class="js-contact-form-submit button-size_5-color_apporange_clear-rounded_1-full_width shift-margin_2-bottom" data-mixpanel="clicked Contact Section Form Submit Button">{{ site.data.l.contact.form.button.[site.lang] }}</button>
+    </div>
+    <h6 class="shift-margin_2 text-color_blightgrey">* required fields</h6>
+</form>
