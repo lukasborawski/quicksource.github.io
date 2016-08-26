@@ -28,3 +28,9 @@ node_modules_path: 'js/libs/node_modules/'
 prose:
   rooturl: _posts
   media: img/uploads/
+  metadata:
+    _posts:
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'title'
