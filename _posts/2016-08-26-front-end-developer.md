@@ -1,6 +1,7 @@
 ---
+layout: job
 published: true
-title: Front-end Developer
+title: Front-end Developer / Warsaw
 ---
 Where name is an exact match to the frontmatter key. Here I have chosen to display this element as hidden to the user as this should never be altered. Depending on the field element you use there are a number of options you can provide. Check out the following list of options available below:
 
