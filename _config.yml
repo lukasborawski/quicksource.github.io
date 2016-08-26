@@ -34,3 +34,7 @@ prose:
         field:
           element: 'text'
           label: 'title'
+      - name: "layout"
+        field:
+          element: 'hidden'
+          value: 'job'
