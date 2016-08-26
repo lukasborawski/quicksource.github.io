@@ -58,9 +58,6 @@ test/style.css
 
 # Others #
 ##################
-# components/*
-# components
-# src/markup/*
 node_modules/
 npm-debug.log
 font/selection.json
