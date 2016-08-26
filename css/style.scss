@@ -81,7 +81,7 @@ footer {
     display: inline-block;
     background-color: $color-app-orange;
     @include position-absolute-custom(0px 0 0 0px);
-    @include animation-custom(loading, 20s 0s 1);
+    @include animation-custom(loading, 90s 0s 1);
     @include animation-keyframe(loading) {
       0% {
         width: 0%;

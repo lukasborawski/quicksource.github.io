@@ -25,12 +25,14 @@
 
     $icons:
     "arrow_down",
-    "arrow_top"
+    "arrow_top",
+    "cross_circle"
     ;
 
     $icons-code:
     "\e097" // arrow_down
     "\e096" // arrow_top
+    "\e043" // cross circle
     ;
 
     $n: length($icons);
