@@ -28,7 +28,6 @@ node_modules_path: 'js/libs/node_modules/'
 prose:
   rooturl: _posts
   media: img/uploads/
-  ignore: ['_data/', '_includes/', '_layouts', '_plugins/', '_posts/', '_sass/', 'css/', 'font/', 'img/', 'js/']
   metadata:
     _posts:
       - name: 'title'
