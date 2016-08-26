@@ -19,7 +19,7 @@ markdown: kramdown
 
 # Excludes
 exclude:
-  ['font/fontcustom/', 'font/selection.json', 'node_modules', 'gulpfile.js', 'package.json', 'deploy.sh']
+  ['font/fontcustom/', 'font/selection.json', 'node_modules/', 'gulpfile.js', 'package.json', 'deploy.sh']
 
 # Others
 node_modules_path: 'js/libs/node_modules/'

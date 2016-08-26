@@ -35,8 +35,6 @@ body {
 header {
   z-index: 10;
   @include position-absolute-custom(0px 0 0 0px);
-  nav {
-  }
 }
 main {
   width: $width-100;
