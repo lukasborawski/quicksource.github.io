@@ -275,6 +275,7 @@ footer {
     @include class-modifire(holder) {
       z-index: 2;
       position: relative;
+      padding-bottom: 50px;
       @include background-cover('main-possitions-background.jpg', 0, 0px, 100%, 800px);
       &::after {
         content: '';
@@ -319,7 +320,7 @@ footer {
         list-style: disc;
         padding-left: 20px;
         margin-bottom: 20px;
-        li {
+        li, ol {
           margin-bottom: 5px;
         }
       }
@@ -327,7 +328,16 @@ footer {
         width: $width-100;
         position: relative;
       }
+      .actionContainer {
+        a {
+          text-decoration: none;
+        }
+      }
       a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
         // --- mobile -----------------------------
         @include breakpoint(600px, 'to') {
           width: $width-100;

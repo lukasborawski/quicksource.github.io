@@ -18,4 +18,4 @@ Having identified possible recruits that match the client's requirements, we act
 * Basic Photoshop skills
 * Growth minded
 
-Having identified possible recruits that match the client.
+Having [identified](admin link) possible recruits that match the client.

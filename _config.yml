@@ -23,3 +23,7 @@ exclude:
 
 # Others
 node_modules_path: 'js/libs/node_modules/'
+
+# Prose
+prose:
+  rooturl: _posts
