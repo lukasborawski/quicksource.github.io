@@ -310,6 +310,9 @@ footer {
         font-family: $font-base-bold;
         @include line-height(26);
       }
+      h2, h3 {
+        font-family: $font-base-bold;
+      }
       p {
         @include line-height(30);
         @include font-size(20);
