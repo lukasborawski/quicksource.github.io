@@ -1,6 +1,6 @@
 ---
 layout: job
-published: false
+published: true
 title: Front-end Developer / Warszawa
 ---
 **Widełełki: 6 000- 10000 brutto umowa o pracę.**
@@ -9,4 +9,3 @@ Zależy nam przede wszystkim na posiadaniu 1-2 lat ( junior) lub lub 3-4 lat (mi
 
 Benefity: pakiet szkoleniowy, ubezpieczenie od wypadków, prywatna opieka medyczna, karta sportowa, świeże owoce każdego dnia oraz możliwość zakupu produktów Klienta w preferencyjnych cenach.
 Osoby zainteresowane zapraszam do kontaktu i przesłania CV na adres: test@adres.pl
-
