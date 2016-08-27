@@ -38,3 +38,7 @@ prose:
         field:
           element: 'hidden'
           value: 'job'
+      - name: 'published'
+        field:
+          element: 'hidden'
+          value: 'true'

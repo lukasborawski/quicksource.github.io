@@ -316,6 +316,7 @@ footer {
       p {
         @include line-height(30);
         @include font-size(20);
+        margin-top: 0;
         margin-bottom: 20px;
       }
       ul {
