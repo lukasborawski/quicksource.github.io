@@ -1,6 +1,6 @@
 ---
 layout: job
-published: false
+published: true
 title: Front-end Developer / Warszawa
 ---
 **Widełki: 6 000- 10000 brutto umowa o pracę.**
